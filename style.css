@@ -1,0 +1,456 @@
+/* ===========================
+   BLACK & ROYAL GOLD THEME
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+font-family:'Poppins',sans-serif;
+color:white;
+overflow-x:hidden;
+}
+
+/* Welcome Screen */
+
+#welcome{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#000,#1a1a1a,#000);
+}
+
+#welcome h1{
+font-size:55px;
+color:#FFD700;
+text-shadow:0 0 20px gold;
+animation:glow 2s infinite alternate;
+}
+
+#welcome h2{
+font-size:70px;
+margin:15px;
+color:white;
+letter-spacing:3px;
+}
+
+#welcome h3{
+color:#FFD700;
+margin-top:10px;
+font-size:30px;
+}
+
+#welcome p{
+font-size:20px;
+margin-top:10px;
+}
+
+button{
+margin-top:35px;
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+background:#FFD700;
+color:black;
+font-weight:bold;
+transition:.4s;
+box-shadow:0 0 25px gold;
+}
+
+button:hover{
+transform:scale(1.1);
+background:white;
+}
+
+/* Main */
+
+#main{
+display:none;
+animation:fade 2s;
+}
+
+.hero{
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+color:#FFD700;
+text-shadow:0 0 15px gold;
+}
+
+.hero p{
+margin-top:25px;
+font-size:22px;
+line-height:40px;
+max-width:850px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* Gift */
+
+.gift-section{
+display:flex;
+justify-content:center;
+margin-top:60px;
+margin-bottom:80px;
+}
+
+.gift-box{
+width:180px;
+height:180px;
+background:#FFD700;
+position:relative;
+cursor:pointer;
+border-radius:12px;
+box-shadow:0 0 40px gold;
+transition:.5s;
+}
+
+.gift-box:hover{
+transform:scale(1.08);
+}
+
+.box{
+width:180px;
+height:180px;
+background:#FFD700;
+border-radius:12px;
+}
+
+.lid{
+width:200px;
+height:35px;
+background:white;
+position:absolute;
+top:-20px;
+left:-10px;
+border-radius:8px;
+}
+
+.gift-box::before{
+content:"";
+position:absolute;
+width:22px;
+height:180px;
+background:white;
+left:79px;
+}
+
+.gift-box::after{
+content:"";
+position:absolute;
+width:180px;
+height:22px;
+background:white;
+top:79px;
+}
+
+/* Letter */
+
+#letter{
+display:none;
+padding:70px;
+max-width:900px;
+margin:auto;
+text-align:center;
+background:#111;
+border-radius:20px;
+box-shadow:0 0 35px gold;
+}
+
+#letter h2{
+color:#FFD700;
+font-size:40px;
+margin-bottom:30px;
+}
+
+#letter p{
+font-size:22px;
+line-height:40px;
+}
+
+/* Gallery */
+
+.gallery{
+padding:90px 20px;
+text-align:center;
+}
+
+.gallery h2{
+font-size:45px;
+color:#FFD700;
+margin-bottom:40px;
+}
+
+.photos{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.photos img{
+width:280px;
+height:350px;
+object-fit:cover;
+border-radius:18px;
+border:4px solid gold;
+transition:.5s;
+box-shadow:0 0 25px gold;
+}
+
+.photos img:hover{
+transform:scale(1.05);
+}
+
+/* Ending */
+
+.ending{
+padding:100px 20px;
+text-align:center;
+}
+
+.ending h1{
+font-size:50px;
+color:#FFD700;
+line-height:80px;
+}
+
+.ending h2{
+margin-top:30px;
+font-size:35px;
+}
+
+/* Animations */
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px gold;
+}
+to{
+text-shadow:0 0 40px gold;
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+.hearts::before,
+.hearts::after{
+    content:"❤";
+    position:fixed;
+    font-size:30px;
+    color:#FFD700;
+    animation:hearts 8s linear infinite;
+    opacity:.7;
+}
+
+.hearts::before{
+    left:15%;
+    animation-delay:0s;
+}
+
+.hearts::after{
+    left:75%;
+    animation-delay:4s;
+}
+
+@keyframes hearts{
+    0%{
+        transform:translateY(100vh) scale(.5);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+/* ===========================
+   CAKE
+=========================== */
+
+.cake-section{
+    display:flex;
+    justify-content:center;
+    margin:80px 0;
+}
+
+.cake{
+    position:relative;
+}
+.top{
+    width:160px;
+    height:60px;
+    background:#fff8dc;
+    margin:0 auto;
+    border-radius:10px;
+}
+
+.middle{
+    width:210px;
+    height:70px;
+    background:#f5deb3;
+    margin:0 auto;
+    border-radius:10px;
+}
+.bottom{
+    width:260px;
+    height:80px;
+    background:#d4af37;
+    border-radius:10px;
+}
+
+
+
+
+.candles{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:5px;
+}
+
+.candle{
+    width:10px;
+    height:40px;
+    background:white;
+    position:relative;
+}
+
+.candle::before{
+    content:"";
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:gold;
+    border-radius:50%;
+    top:-12px;
+    left:-1px;
+    animation:flicker .6s infinite alternate;
+}
+
+@keyframes flicker{
+    from{
+        transform:scale(1);
+        opacity:1;
+    }
+    to{
+        transform:scale(1.3);
+        opacity:.6;
+    }
+}
+
+/* ===========================
+   FLOATING BALLOONS
+=========================== */
+
+body::before,
+body::after{
+    content:"🎈";
+    position:fixed;
+    font-size:50px;
+    animation:balloons 12s linear infinite;
+}
+
+body::before{
+    left:8%;
+}
+
+body::after{
+    right:8%;
+    animation-delay:6s;
+}
+
+@keyframes balloons{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+#welcome h1{
+    font-size:38px;
+}
+
+#welcome h2{
+    font-size:50px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:32px;
+}
+
+.gallery h2{
+    font-size:34px;
+}
+
+.photos img{
+    width:90%;
+    height:auto;
+}
+
+.ending h1{
+    font-size:34px;
+    line-height:50px;
+}
+
+.ending h2{
+    font-size:24px;
+}
+
+#letter{
+    padding:30px;
+}
+
+#letter p{
+    font-size:18px;
+    line-height:30px;
+}
+
+.gift-box{
+    transform:scale(.85);
+}
+
+button{
+    width:80%;
+    max-width:300px;
+}
+}
